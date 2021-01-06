@@ -2,11 +2,7 @@ import { Schema, model } from 'mongoose';
 
 const catSchema = new Schema({
     name: String,
-    slug: {
-        type: String,
-        unique: true
-    },
-    type: String,
+    type: String, //drinks or food
     images: { 
         title: String
     }

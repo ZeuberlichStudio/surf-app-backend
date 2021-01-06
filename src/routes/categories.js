@@ -1,11 +1,6 @@
 const catRouter = require('express').Router();
-import Category from 'models/category';
+import { getCategoryById } from 'controllers/categories-controller';
 
-
-catRouter.get( '/', ( req, res ) => {
-    Category.find()
-        .then( data => res.send(data) )
-        .catch( err => res.send(err) );
-});
+catRouter.get('/:_id', getCategoryById);
 
 module.exports = catRouter;
